@@ -1,0 +1,11 @@
+def PatternCount(Text, Pattern):
+    count = 0
+    for i in range(len(Text)-len(Pattern)+1):
+        if Text[i:len(Pattern)+ i] == Pattern:
+            count+=1
+    return count
+    
+Text = "GCGCG"
+Pattern = "GCG"
+
+print(PatternCount(Text, Pattern))
